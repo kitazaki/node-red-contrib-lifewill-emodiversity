@@ -1,0 +1,1 @@
+[{"id":"2e3164bbc26cf2df","type":"inject","z":"ccf840d96014e07f","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"これはテストです","payloadType":"str","x":230,"y":80,"wires":[["d1c499cb1310711b"]]}]

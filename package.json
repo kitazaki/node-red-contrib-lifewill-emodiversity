@@ -1,0 +1,32 @@
+{
+  "name": "node-red-contrib-lifewill-emodiversity",
+  "version": "0.0.1",
+  "description": "a node-red node for LIFE WILL Emodiversity API",
+  "main": "emodiversity.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitazaki/node-red-contrib-lifewill-emodiversity.git"
+  },
+  "keywords": [
+    "node-red",
+    "lifewill",
+    "emodiversity",
+    "lifull",
+    "kitazaki"
+  ],
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "author": "kitazaki",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kitazaki/node-red-contrib-lifewill-emodiversity/issues"
+  },
+  "homepage": "https://github.com/kitazaki/node-red-contrib-lifewill-emodiversity#readme",
+  "node-red": {
+    "nodes": {
+      "lifewill": "emodiversity.js"
+    }
+  }
+}

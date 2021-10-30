@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-lifewill-emodiversity",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "a node-red node for LIFE WILL Emodiversity API",
   "main": "emodiversity.js",
   "scripts": {},

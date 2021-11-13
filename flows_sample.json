@@ -1,1 +1,128 @@
-[{"id":"2e3164bbc26cf2df","type":"inject","z":"ccf840d96014e07f","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"これはテストです","payloadType":"str","x":230,"y":80,"wires":[["d1c499cb1310711b"]]}]
+[
+    {
+        "id": "3f04910a7a541bc3",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "68b153bae5da8ef1",
+        "type": "inject",
+        "z": "3f04910a7a541bc3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "これはテストです",
+        "payloadType": "str",
+        "x": 150,
+        "y": 40,
+        "wires": [
+            [
+                "76a49d2fc969ce0f"
+            ]
+        ]
+    },
+    {
+        "id": "6e50bd1c2c96bdf0",
+        "type": "debug",
+        "z": "3f04910a7a541bc3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "76a49d2fc969ce0f",
+        "type": "emotion_analyze",
+        "z": "3f04910a7a541bc3",
+        "name": "",
+        "token": "7d4ce67fb86954127b527b2cf062d71084f7e980",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "6e50bd1c2c96bdf0"
+            ]
+        ]
+    },
+    {
+        "id": "bf93ed6d82113f70",
+        "type": "emotion_map",
+        "z": "3f04910a7a541bc3",
+        "name": "",
+        "token": "7d4ce67fb86954127b527b2cf062d71084f7e980",
+        "x": 320,
+        "y": 280,
+        "wires": [
+            [
+                "5debdaddb2054515"
+            ]
+        ]
+    },
+    {
+        "id": "143e5e95a09fa3c0",
+        "type": "inject",
+        "z": "3f04910a7a541bc3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "bf93ed6d82113f70"
+            ]
+        ]
+    },
+    {
+        "id": "5debdaddb2054515",
+        "type": "debug",
+        "z": "3f04910a7a541bc3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 340,
+        "wires": []
+    }
+]

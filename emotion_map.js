@@ -17,13 +17,14 @@ module.exports = function(RED) {
 
 		node.on('input', async function(msg) {
 			// const mes = msg.payload;
+			var res;
 			try {
 				if (year) {
 				  if (month) {
-				    const res = await axios.post(`/lifewill/api/v1/emotion-map`, encodeURI("year=`${year}`&month=`${month}`"));
+				    res = await axios.post(`/lifewill/api/v1/emotion-map`, encodeURI("year="+year+"&month="+month));
 				  }
 				} else {
-				  const res = await axios.post(`/lifewill/api/v1/emotion-map`);
+				  res = await axios.post(`/lifewill/api/v1/emotion-map`);
 				}
 		                msg.payload = res.data;
             			node.send(msg);

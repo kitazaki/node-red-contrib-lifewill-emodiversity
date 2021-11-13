@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-lifewill-emodiversity",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a node-red node for LIFE WILL Emodiversity API",
   "main": "emodiversity.js",
   "scripts": {},
@@ -26,7 +26,8 @@
   "homepage": "https://github.com/kitazaki/node-red-contrib-lifewill-emodiversity#readme",
   "node-red": {
     "nodes": {
-      "lifewill": "emodiversity.js"
+      "emotion_analyze": "emotion_analyze.js",
+      "emotion_map": "emotion_map.js"
     }
   }
 }

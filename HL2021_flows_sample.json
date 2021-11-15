@@ -1,0 +1,568 @@
+[
+    {
+        "id": "daa3f8b8e84c2710",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "aa6096bc7ff0dcaf",
+        "type": "debug",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "047dcd4bc7c1b1d8",
+        "type": "emotion_analyze",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "token": "7d4ce67fb86954127b527b2cf062d71084f7e980",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "aa6096bc7ff0dcaf",
+                "8a48488d6112d5a6",
+                "04e8e8640db7fdae",
+                "3a3f4c69af822ec1",
+                "db154ba872474ce1",
+                "b5f31801674b23b9",
+                "c2ec72fe5f45ebad",
+                "202da5bdfcfc73a8",
+                "9c5d1a8a13286215",
+                "bf832c8d543a2a91",
+                "97f25758ec15828d",
+                "3636ddc4a65d4ad4",
+                "84bcec488da30024"
+            ]
+        ]
+    },
+    {
+        "id": "e9fd877d6e961e54",
+        "type": "twitter in",
+        "z": "daa3f8b8e84c2710",
+        "twitter": "",
+        "tags": "#ポケモン",
+        "user": "false",
+        "name": "",
+        "inputs": 1,
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "047dcd4bc7c1b1d8",
+                "7a357a3be4345daa"
+            ]
+        ]
+    },
+    {
+        "id": "8a48488d6112d5a6",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[0]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ドキドキ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "1753e1ccaafe5ec8",
+        "type": "ui_chart",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "group": "549108be37eaa99e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "エモ度",
+        "chartType": "radar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "04e8e8640db7fdae",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ワクワク",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "3a3f4c69af822ec1",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[2]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "キュンキュン",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "db154ba872474ce1",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[3]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ニコニコ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 480,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "b5f31801674b23b9",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[4]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ホノボノ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 520,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "c2ec72fe5f45ebad",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[5]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ユルユル",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 560,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "202da5bdfcfc73a8",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[6]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ウトウト",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 600,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "7a357a3be4345daa",
+        "type": "ui_text",
+        "z": "daa3f8b8e84c2710",
+        "group": "549108be37eaa99e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ツィート",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 360,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9c5d1a8a13286215",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[7]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "シクシク",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 640,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "bf832c8d543a2a91",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[8]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "モヤモヤ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 680,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "97f25758ec15828d",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[9]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ツンツン",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 720,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "3636ddc4a65d4ad4",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[10]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ピリピリ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 760,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "84bcec488da30024",
+        "type": "change",
+        "z": "daa3f8b8e84c2710",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.emo_graph[11]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ソワソワ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 800,
+        "wires": [
+            [
+                "1753e1ccaafe5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "56f08c0efbc44c0c",
+        "type": "ui_spacer",
+        "z": "daa3f8b8e84c2710",
+        "name": "spacer",
+        "group": "549108be37eaa99e",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "549108be37eaa99e",
+        "type": "ui_group",
+        "name": "デフォルト",
+        "tab": "477efd72bde54727",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "477efd72bde54727",
+        "type": "ui_tab",
+        "name": "ホーム",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
